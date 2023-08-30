@@ -10,6 +10,7 @@ I INTRODUCTION:
 Search engines started in the ’90s and it’s one of the most interesting topics to learn and research what’s behind it. Information retrieval (IR) starts with the query which was given by the user. In IR query is not defined uniquely and instead of matching to the exact result, it may match to multiple documents based on relevancy. Information needs to be taken from a database. The key difference between IR and database is ranking.
 The main idea of a search engine is to give us a fast and simple way to find the required information of user interest. The entire process of a search engine is carried out with the model of crawling and indexing, and ranking. To improve the user experience, we need to use efficient algorithms which give us relevant and high-quality results.
 
+![image](https://github.com/abdulbaseer657/Search-Engine-/assets/52657917/8a451fa9-8eb3-45c7-875b-a28274b7eeb5)
 
 
 
