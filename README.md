@@ -1,5 +1,5 @@
 # Search-Engine-
-SEARCH ENGINE 
+SEARCH ENGINE with PageRank Algorithm coded Manually by 
 Mohammed Abdul Baseer
 University of Kansas, Lawrence.
 
@@ -67,9 +67,12 @@ Image source: “The image used in the documentation is taken from the presentat
 
 VII RESULTS
 Below are the screenshots of the results. The search engine runs on default port 5000 when we run the search app python file the URL for the search engine is displayed in the logs. Browsing the URL, we can see the active search engine with a text box and search button. When a user enters any keyword and hits the search button or enter, the search engine retrieves all the related URLs in the Ku domain based on cosine similarity and users can navigate any of the webpages of their choice.
+![image](https://github.com/abdulbaseer657/Search-Engine-/assets/52657917/da7a30fe-d931-4ee4-b521-8b2310569b05)
+
+
+ ![image](https://github.com/abdulbaseer657/Search-Engine-/assets/52657917/df4d1439-ddf8-44ce-8510-ca41e0def3b3)
+
  
- 
-Image source: “The image used in the documentation is taken from the presentation PPT demonstrated in the class”
 
 VIII RELEVANCE FEEDBACK 
 We have tried to implement the Relevance feedback in the next version of the search engine. The main idea to implement this module is to improve the result. Generally, we consider the results from initial search results obtained from the user query, to know the user feedback and use the information is required or not in the next new query.
