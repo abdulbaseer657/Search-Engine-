@@ -144,14 +144,13 @@ def enter_query_user(query):
 		#print(result_dict)
 		new_resdict = {}
 		for i in result_dict.keys():
-			# j = i.replace('/', "\\")
-			f= open('Pre_Processing/'+(i) , 'rt')
-			c = 0
-			k = ''
-			for line in f:
-				if(c==0):
-					c=c+1
-					k=line.replace('\n','')
+			with open('Pre_Processing/'+(i) , 'rt') as f:
+				c = 0
+				k = ''
+				for line in f:
+					if(c==0):
+						c=c+1
+						k=line.replace('\n','')
 			new_resdict[k]= result_dict[i]
 		print(new_resdict)
 		file_a = open(r'Pre_Processing/Saved_pickle_files/result_dict.pkl', 'wb')
