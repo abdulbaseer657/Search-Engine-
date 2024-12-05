@@ -67,12 +67,12 @@ def clean_data(text):
 
 def get_url(file_name):
     xfile = file_name
-    fln = open('new_docs/'+xfile, 'r')
-    c=0
-    for line in fln:
-        if(c==0):
-            c=c+1
-            k=line.replace('\n','')
+    with open('new_docs/'+xfile, 'r') as fln:
+        c=0
+        for line in fln:
+            if(c==0):
+                c=c+1
+                k=line.replace('\n','')
     url = k
     return url
 
@@ -84,8 +84,8 @@ def main():
     if not os.path.exists('clean_docs'):
         os.makedirs('clean_docs')
     for file in directory:
-        open_file = open('new_docs/'+file, 'r')
-        read_file = open_file.read() 
+        with open('new_docs/'+file, 'r') as open_file:
+            read_file = open_file.read() 
         read_file = clean_data(read_file)
         read_file = dehtml(read_file)
         read_file = re.sub('\W+',' ', read_file )
