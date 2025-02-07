@@ -4,22 +4,23 @@ import math
 from query_pre_processing import remove_tags_query
 from functools import reduce
 import sys
+import fickling
 
 #collecting word list using pickle
 file2 = open(r'Pre_Processing/Saved_pickle_files/dict.pkl', 'rb')
-tokens_list_word = pickle.load(file2)
+tokens_list_word = fickling.load(file2)
 file2.close()
 #print(tokens_list_word)
 
 #Collecting dictionary structure (specifically posting_dict) using pickle
 file3 = open(r'Pre_Processing/Saved_pickle_files/postings_pf.pkl', 'rb')
-posting_dict = pickle.load(file3)
+posting_dict = fickling.load(file3)
 file3.close()
 #print(posting_dict)
 
 #Collecting dictionary structure (specifically posting_dict) using pickle
 file4 = open(r'Pre_Processing/Saved_pickle_files/all_docs_pf.pkl', 'rb')
-all_doc_dicts = pickle.load(file4)
+all_doc_dicts = fickling.load(file4)
 file3.close()
 #print(all_doc_dicts) - list of all the documnets in dictionary format
 #print(tokens_list_word)
