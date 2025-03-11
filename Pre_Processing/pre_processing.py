@@ -56,8 +56,8 @@ def main():
 		os.makedirs('clean_docs')
 
 	for file in directory:
-		open_file = open('new_docs/'+file, 'r', encoding="utf8")
-		read_file = open_file.read()
+		with open('new_docs/'+file, 'r', encoding="utf8") as open_file:
+		    read_file = open_file.read()
 
 		plain_text = remove_Tags(read_file)
 		lowerCase = to_Lower_case(plain_text)
