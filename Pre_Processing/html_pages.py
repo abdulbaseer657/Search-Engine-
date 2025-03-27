@@ -1,8 +1,8 @@
 import os
 import urllib.request
 import re
-# importing the modules
-import requests
+from security import safe_requests
+
 #import main
 
 
@@ -22,7 +22,7 @@ def html_pages_crawl():
             for i in range(1,len(urls_list)+1):
                 try:
                     seed_url = urls_list[i].strip()
-                    n = requests.get(seed_url, headers=hearders)
+                    n = safe_requests.get(seed_url, headers=hearders)
                     al = n.text
                     file_title = al[al.find('<title>') + 7 : al.find('</title>')]
                     #file_title = file_title.replace(" ","_")
