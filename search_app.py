@@ -2,8 +2,8 @@
 from flask import Flask, render_template, request
 #import sys
 import vectorizer_sp
-import pickle
 import jinja2
+import fickling
 
 app = Flask(__name__)
 app.jinja_env.globals.update(zip = zip)
@@ -19,7 +19,7 @@ def result_page():
 		print("This is the user value: ", serach_data )
 		vectorizer_sp.main_func((serach_data ))
 		file2 = open(r'Pre_Processing/Saved_pickle_files/result_dict.pkl', 'rb')
-		results_dict = pickle.load(file2)
+		results_dict = fickling.load(file2)
 		file2.close()
 		print(results_dict)
 		results_dict= dict(sorted(results_dict.items(),key=lambda item: item[1],reverse=True))
