@@ -13,9 +13,8 @@ def html_pages_crawl():
 
             if not os.path.exists('new_docs'):
                 os.makedirs('new_docs')
-
-            file1 = open("web_crawler/crawled.txt","r")
-            urls_list = file1.readlines()
+            with open("web_crawler/crawled.txt","r") as file1:
+                        urls_list = file1.readlines()
             #print(urls_list[3])
             #print(len(urls_list))
 
